@@ -59,9 +59,9 @@ public class BubbleSort {
     for (int i = 0; i < totalNumeros - 1; i++) {
       trocado = false;
       for (int j = 0; j < totalNumeros - i - 1; j++) {
-        int posicaoNumberoA = j, posicaoNumberoB = j + 1;
-        if (numerosParaOrdenar[posicaoNumberoA] > numerosParaOrdenar[posicaoNumberoB]) {
-          trocaValoresDePosicaoNoArray(posicaoNumberoA, posicaoNumberoB, numerosParaOrdenar);
+        int posicaoNumeroA = j, posicaoNumeroB = j + 1;
+        if (numerosParaOrdenar[posicaoNumeroA] > numerosParaOrdenar[posicaoNumeroB]) {
+          trocaValoresDePosicaoNoArray(posicaoNumeroA, posicaoNumeroB, numerosParaOrdenar);
           trocado = true;
         }
       }
@@ -83,9 +83,9 @@ public class BubbleSort {
     imprimeNumerosNoConsole(numeros);
   }
 
-  private static void trocaValoresDePosicaoNoArray(int posicaoA, int posicaoB, int[] numeros) {
-    int valorA = numeros[posicaoA], valorB = numeros[posicaoB];
-    numeros[posicaoA] = valorB;
-    numeros[posicaoB] = valorA;
+  private static void trocaValoresDePosicaoNoArray(int posicaoNumeroA, int posicaoNumeroB, int[] numeros) {
+    int valorNumeroA = numeros[posicaoNumeroA], valorNumeroB = numeros[posicaoNumeroB];
+    numeros[posicaoNumeroA] = valorNumeroB;
+    numeros[posicaoNumeroB] = valorNumeroA;
   }
 }
