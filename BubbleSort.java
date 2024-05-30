@@ -2,8 +2,8 @@
 /*
 * UFPR – Universidade Federal do Paraná
 * Setor de Educação Profissional e Tecnológica
-* Especialização em Desenvolvimento Ágil de Software
-* AAP - Aspectos Ágeis de Programação
+* Especialização em Desenvolvimento Agil de Software
+* AAP - Aspectos Ageis de Programação
 *
 * Prof. Ms. Daniel Francisco Wandarti
 * Aluno: Alberto Sussumu Kato Junior
