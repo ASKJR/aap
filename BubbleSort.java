@@ -18,51 +18,62 @@
  * 1) Minimizar Parâmetros: Remoção do parâmetro tamanho de array (n) para os
  * métodos: bubbleSort e printArray.
  * 
+ * 2) Nomes Significativos: 
+ *  arr -> numerosParaOrdenar, 
+ *  arr -> numerosParaImprimir,
+ *  bubbleSort -> ordenaNumerosComBubbleSort,
+ *  printArray -> imprimeNumerosNoConsole 
+ *  etc.
+ * 
+ * 3) Comentários: Remoção de comentários por nomes significativos. Ex.
+ *  // Function to print an array -> imprimeNumerosNoConsole()
+ *  
+ * 4) YAGNI: Remoção do import java.io.*; Substituição de `for` tradicional por
+ * `for` avançado em imprimeNumerosNoConsole.
+ * 
+ * 5) Variáveis declaradas próximas ao seu contexto de uso. Ex. int i declarado
+ * dentro do `for`.
+ * 
+ * 6) Métodos: Criação da função trocaValoresDePosicaoNoArray para facilitar a 
+ * legibilidade.
+ * 
  */
-import java.io.*;
 
-class BubbleSort {
+public class BubbleSort {
 
-  // An optimized version of Bubble Sort
-  public static void bubbleSort(int arr[]) {
-    int i, j, temp;
+  public static void ordenaNumerosComBubbleSort(int numerosParaOrdenar[]) {
+    int totalNumeros = numerosParaOrdenar.length;
     boolean trocado;
-    for (i = 0; i < arr.length - 1; i++) {
+    for (int i = 0; i < totalNumeros - 1; i++) {
       trocado = false;
-      for (j = 0; j < arr.length - i - 1; j++) {
-        if (arr[j] > arr[j + 1]) {
-
-          // Swap arr[j] and arr[j+1]
-          temp = arr[j];
-          arr[j] = arr[j + 1];
-          arr[j + 1] = temp;
+      for (int j = 0; j < totalNumeros - i - 1; j++) {
+        int posicaoNumberoA = j, posicaoNumberoB = j + 1;
+        if (numerosParaOrdenar[posicaoNumberoA] > numerosParaOrdenar[posicaoNumberoB]) {
+          trocaValoresDePosicaoNoArray(posicaoNumberoA, posicaoNumberoB, numerosParaOrdenar);
           trocado = true;
         }
       }
-
-      // If no two elements were
-      // trocado by inner loop, then break
-      if (trocado == false)
+      if (!trocado)
         break;
     }
   }
 
-  // Function to print an array
-  static void printArray(int arr[]) {
-    int i;
-    for (i = 0; i < arr.length; i++)
-      System.out.print(arr[i] + " ");
+  public static void imprimeNumerosNoConsole(int numerosParaImprimir[]) {
+    for (int numero : numerosParaImprimir)
+      System.out.print(numero + " ");
     System.out.println();
   }
 
-  // Driver program
   public static void main(String args[]) {
-    int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
-    bubbleSort(arr);
+    int numeros[] = { 64, 34, 25, 12, 22, 11, 90 };
+    ordenaNumerosComBubbleSort(numeros);
     System.out.println("Array ordenado: ");
-    printArray(arr);
+    imprimeNumerosNoConsole(numeros);
+  }
+
+  private static void trocaValoresDePosicaoNoArray(int posicaoA, int posicaoB, int[] numeros) {
+    int valorA = numeros[posicaoA], valorB = numeros[posicaoB];
+    numeros[posicaoA] = valorB;
+    numeros[posicaoB] = valorA;
   }
 }
-
-// This code is contributed
-// by Nikita Tiwari.
