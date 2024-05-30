@@ -1,9 +1,17 @@
 
 /*
+* UFPR – Universidade Federal do Paraná
+* Setor de Educação Profissional e Tecnológica
+* Especialização em Desenvolvimento Ágil de Software
+* AAP - Aspectos Ágeis de Programação
+*
+* Prof. Ms. Daniel Francisco Wandarti
 * Aluno: Alberto Sussumu Kato Junior
-* 
+*/
 
 /*
+* Trabalho da Disciplina - AAP
+*
 * ENUNCIADO:
 * Faça uma versão clean code do arquivo anexo. 
 * O arquivo anexado é um exemplo de código Bubble Sort. 
@@ -11,10 +19,12 @@
 * explique quais alterações você fez. 
 * Caso você não queira utilizar este código pode escolher outro 
 * em Sorting Algorithms - GeeksforGeeks
+*
 */
 
 /*
- * MODIFICAÇÕES:
+ * MODIFICAÇÕES REALIZADAS PELO ALUNO:
+ * 
  * 1) Minimizar Parâmetros: Remoção do parâmetro tamanho de array (n) para os
  * métodos: bubbleSort e printArray.
  * 
@@ -26,16 +36,18 @@
  *  etc.
  * 
  * 3) Comentários: Remoção de comentários por nomes significativos. Ex.
- *  // Function to print an array -> imprimeNumerosNoConsole()
+ *  // Function to print an array -> `imprimeNumerosNoConsole`
  *  
- * 4) YAGNI: Remoção do import java.io.*; Substituição de `for` tradicional por
- * `for` avançado em imprimeNumerosNoConsole.
+ * 4) YAGNI: Remoção do import java.io.*; Substituição do `for` tradicional por
+ * `for` avançado em `imprimeNumerosNoConsole`.
  * 
  * 5) Variáveis declaradas próximas ao seu contexto de uso. Ex. int i declarado
  * dentro do `for`.
  * 
- * 6) Métodos: Criação da função trocaValoresDePosicaoNoArray para facilitar a 
- * legibilidade.
+ * 6) Métodos: Criação do método `trocaValoresDePosicaoNoArray` para facilitar a 
+ * legibilidade e encapsulamento da lógica de troca.
+ * 
+ * 7) Organização da Classe : Métodos públicos primeiros e nas sequência os privados.
  * 
  */
 
